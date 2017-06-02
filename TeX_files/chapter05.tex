@@ -1,29 +1,35 @@
 \chapter{Venting and Bakeout}
 \section{Venting}
-Ion pump and ion pressure gauge should be off well in advance (day before for ion pump, few hours for ion gauge) of venting because when they are on, they contain hot filaments which could oxidize when exposed to air.
+Ion pump and ion pressure gauge should be off well in advance (day before for ion pump, 1 hour for ion gauge) of venting because when they are on, they contain hot filaments which could oxidize when exposed to air. \textbf{Also should pump the FEL with turbo pump so that will be able to open [MBE, FEL] valve and vent them together}. Wenzhi told me to run turbo pump overnight before venting? Why do you need to pump system down when goal is to bring to atmosphere?
 \begin{enumerate}
 \item	If not already done so, flush the water cooling lines (see flushing procedure) turn off chiller and remove the cooling lines from evaporator(s) that are removing.
 \item	Retract the crystal thickness monitor rod to the marked position.
-\item	Vent the system. (Keep gate valve open).
+\item Check all valve positions: 
 \begin{enumerate}
-\item	Run turbo pump overnight before venting? Why do you need to pump system down when goal is to bring to atmosphere?
-\item	Make sure ion gauge is off: when it’s off, the left display (MBE system pressure) will not display a reading. If it is not off, need to turn it off and wait a few hours for filament to cool down before venting.
+	\item Pneumatic gate valve open
+	\item [MBE, FEL] open
+	\item [FEL, turbo] closed
+Note: This is different from the Omicron MBE manual which has mistake.
+\end{enumerate}
+\item	Vent the system (click on turbo pump icon on touchscreen, then vent}.)
+\item	Make sure ion gauge is off: when it’s off, the left display (MBE system pressure) will not display a reading. If it is not off, need to turn it off and wait 1 hour for filament to cool down before venting.
 \item	Venting is done with in-house N2 since we do not want fill the MBE with air. Open the N2 valve behind the AFM desk and to the left of the compressed air valve. Make sure to use N2 and not compressed air! Open the valve at end of N2 pipe (white) and adjust the regulator until feel proper N2 pressure: want a gentle N2 flow since venting slowly is safer. Insert the N2 pipe into black pipe which comes out of turbo pump.
-\item	On touch screen press: \emph{turbo pump} $\rightarrow$ \emph{vent} $\rightarrow$ \emph{yes}. This turns off both roughing and turbo pump. Turbo takes some time to slow down. The system will gradually fill with N2 and can hear the soft air flow sound going in through the turbo. Need to wait until the soft noise is almost gone which means the system is vented. The small pressure reading in right display reads it near the turbo pump, so it doesn’t indicate pressure inside MBE. It can be used for rough estimate of if pressure is rising or falling. When the air flow sound disappeared, pressure showed 2.8e0mB. The flexibility of the bevel on the manipulator can also help determine if system has been vented enough.
+\item	On touch screen press: \emph{turbo pump} $\rightarrow$ \emph{vent} $\rightarrow$ \emph{yes}. This turns off both roughing and turbo pump. Turbo takes some time to slow down. The system will gradually fill with N2 and can hear the soft air flow sound going in through the turbo. \textbf{Need to wait until the soft noise is almost gone which means the system is vented}. The small pressure reading in right display reads it near the turbo pump, so it doesn’t indicate pressure inside MBE. It can be used for rough estimate of if pressure is rising or falling. When the air flow sound disappeared, pressure showed 2.8e0mB. The flexibility of the bevel on the manipulator can also help determine if system has been vented enough.
 \end{enumerate}
-\end{enumerate}
+
 
 \section{Removing evaporators}
 \begin{enumerate}
 \item	Need 2 people for this. Wearing clean gloves, use 2 wrenches (size10) to unscrew the nuts that hold the evaporator in place. When removing last nuts, one person needs to hold the evaporator. Very carefully pull the evaporator straight out of the system (it is quite long and need to not hit any part of it against system). Make sure to not hit the wobble stick when standing up! \\\\
-For the W evaporator, its source is a rod so can carefully put the metal protective tube/shield onto evaporator (1 person should hold evaporator steady), making sure to not hit components against the shield, and use the nuts the hold it in place. Wrap around near evaporator-shield connection point with large Kimwipes and then foil. Then can lay the W evaporator down, supporting it on the shutter and electrical connection "legs". \textbf{If the Sn evaporator has source in it, can never lay it down!}. Once person must always hold it upright until the source crucible is removed.
+For the W evaporator, its source is a rod so can carefully put the metal protective tube/shield onto evaporator (1 person should hold evaporator steady), making sure to not hit components against the shield, and use the nuts the hold it in place. Wrap around near evaporator-shield connection point with large Kimwipes and then foil. Then can lay the W evaporator down, supporting it on the shutter and electrical connection "legs". \textbf{If the Sn or Se evaporator has source in it, can never lay it down!}. Once person must always hold it upright until the source crucible is removed.
 \item	After have placed shielded evaporator in safe and stable location, need to cover the evaporator opening in MBE system using a flange.  First wipe it with IPA and then put a new Cu gasket into the slot. 
 \item	Attach the cover with the same nuts used for evaporator to the opening. For tightening components on vacuum systems need to ensure that do it evenly. Here dealing with small components so it is not so strict. Must make sure that you are always turning in the correct direction (tightening and not loosening) because if loosen after tightening and then tighten again, this could result in leakage. Correct direction for tightening is clockwise when looking at the nut or bolt from the side that’s facing out. First hand-tighten all the nuts. Then go in a crisscross pattern and tighten about $1/4$ turn. Then go around in circles, gradually tightening each nut about the same amount. Do not apply too much force when tightening. Due to space limitations, it seems easier to hold the bolt in place while tightening the nuts from the bottom. Make sure to not hit the wobble stick which will be right above your head!
-\item	 After the cover(s) are on, need to pump down the system. It is not good to leave the system at atmosphere pressure even though is filled with N2. To pump down:
+\item If planning on baking the system soon, before pump down, temporarily close [FEL, MBE] valve and install a blank (need for post-bakeout degassing) to the FEL. \textbf{Then before even tightening the viewport, remove the magnetic coupler from the FEL transfer arm while system is still vented}. This way if the blank falls (which has good chance of happening) while trying to remove coupler, can just open view port, put it back in the jaw, and try  again. If where to fall when already pumped down, would need to vent FEL, then pump it down again after put sample back.
+\item	 After the cover(s) are on, need to pump down the system. It is not good to leave the system at atmosphere pressure even though is filled with N2. Should pump down using the same valve positions described in step 3. To pump down:
 \begin{enumerate}
 \item	Turn off N2 flow but don’t disconnect the tube from turbo pump, otherwise it lets air into pump which could make it harder to pump. 
-\item	Turn on turbo pump. Will at first hear a loud noise of the roughing pump motor. This noise seems louder than when turn on turbo pump on a system already at vacuum but is probably because of the higher pressure difference/more work the pump needs to do when pumping from atmosphere. The turbo will turn on and speed up automatically until it reaches max speed. 
-\item	After ~1hr pumping, can turn on ion gauge: At top control buttons press the book button, then display will say “emission auto?” then press checkmark button. Right display pressure reading was 5.8e-1 at this time. MBE pressure (left display) was 1.2e-6. MBE pressure dropped to ~5e-7 about 2hrs after started pumping.
+\item	Turn on turbo pump. Will at first hear a loud noise of the roughing pump motor. This noise seems louder than when turn on turbo pump on a system already at vacuum but is probably because of the higher pressure difference/more work the pump needs to do when pumping from atmosphere. The turbo will turn on and speed up automatically until it reaches max speed. This should take less than 15 minutes. At max speed the turbo current should be about 1.65A.
+\item	After 30min pumping, can turn on ion gauge: At top control buttons press the book button, then display will say “emission auto?” then press checkmark button. Foreline pressure (right display) reading was 5.8e-1 at this time. MBE pressure (left display) was 1.2e-6 after 1 hour pumping. MBE pressure should drop to below 8E-7mB 2hrs after start pumping.
 \end{enumerate}
 \end{enumerate}
 
@@ -32,7 +38,7 @@ For the W evaporator, its source is a rod so can carefully put the metal protect
 Must follow all steps carefully!
 \begin{enumerate}
 \item Make sure maintenance work on evaporators is completed and source materials installed. Make sure a clean blank sample holder is in FEL, no sample plate in MBE heater stage.
-\item	Start pumping down MBE+FEL by turning on turbo pump. Keep ion pump off. Gate valve [MBE chamber, FEL] is open, metal valve [Turbo molecular pump, FEL] is closed. System needs to reach good vacuum before start baking.
+\item	Start pumping down MBE+FEL by turning on turbo pump. Keep ion pump off. Make sure pneumatic gate valve is open, [MBE chamber, FEL] is open, metal valve [Turbo molecular pump, FEL] is closed. System needs to reach good vacuum (mid e-8mB or better) before start baking. 
 \item	Thoroughly flush water cooling lines with air. Increase air pressure by $1/2$ turn at valve behind AFM computer. Remember to decrease it back when done. Must flush significantly longer $>30$min each line) than for regular shut-down of water chiller since water vapor in lines during bakeout can cause damage.
 \item	Disconnect water cooling lines including the thicker lines above the T-shaped connectors with valves (these lines need to be slit with knife to be able to remove them). 
 \item	Disconnect evaporator electronic connections. For safety, unplug corresponding power supplies before removing Se evaporator cable connections. 
