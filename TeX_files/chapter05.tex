@@ -1,6 +1,6 @@
 \chapter{Venting and Bakeout}
-\section{Flushing Water Cooling Lines}
-This must be done before bakeout to prevent from water boiling in the pipes (and if need to turn off the chiller while cyrostat is still cold to prevent from water from freezing in the pipes).
+\section{Flushing Water Cooling Lines}\label{flushing}
+This must be done before bakeout to prevent from water boiling in the pipes (and if need to turn off the chiller while cryostat is still cold to prevent from water from freezing in the pipes).
 \begin{enumerate}
 \item	Open air valve behind AFM computer. Feel flushing tube end to make sure air is flowing.
 \item	Open water supply and return valves for the closed loop. This is used to relieve water pressure when all other loops will be closed.
@@ -9,22 +9,22 @@ This must be done before bakeout to prevent from water boiling in the pipes (and
 \item	Connect air tube (white) to water input line (green label) and the clear tube to water out line (red label).  Close corresponding supply and return valve. Set up a container to collect the water.
 \item	Turn grey switches on water input and output lines 180$\degree$ to flush position: plastic piece should point towards flushing tube connection ports. Water will flow for a few minutes. For regular flushing, wait 5-10min. For flushing before baking need to flush much longer (greater than 30min each line) to get all water out. Once done, disconnect the flushing tubes and leave the grey switches in the flush position. 
 \end{enumerate}
-\item	Once all MBE cooling loops are flushed, can turn off chiller and close air valve.
+\item	Once all MBE cooling loops are flushed, can turn off chiller if needed. For bakeout, it's best to keep water running through the closed loop to reduce risk of corrosion.
 \end{enumerate}
 
 \section{Venting}
 Ion pump and ion pressure gauge should be off well in advance (day before for ion pump, 1 hour for ion gauge) of venting because when they are on, they contain hot filaments which could oxidize when exposed to air. \textbf{Also should pump the FEL with turbo pump so that will be able to open [MBE, FEL] valve and vent them together}. Wenzhi told me to run turbo pump overnight before venting? Why do you need to pump system down when goal is to bring to atmosphere?
 \begin{enumerate}
-\item	If not already done so, flush the water cooling lines (see flushing procedure) turn off chiller and remove the cooling lines from evaporator(s) that are removing.
-\item	Retract the crystal thickness monitor rod to the marked position.
+\item	If not already done so, flush the water cooling lines (see flushing procedure) turn off chiller and remove the cooling lines.
+\item	Retract the crystal thickness monitor rod to the bakeout marked position.
 \item Check all valve positions: 
 \begin{enumerate}
 	\item Pneumatic gate valve open
-	\item [MBE, FEL] open
-	\item [FEL, turbo] closed
-Note: This is different from the Omicron MBE manual which has mistake.
+	\item {[MBE, FEL]} open    %{} are so it doesn't error out when sees [ immedieately follow \item
+	\item {[FEL, turbo]} closed
 \end{enumerate}
-\item	Vent the system (click on turbo pump icon on touchscreen, then vent}.)
+Note: This is different from the Omicron MBE manual which has mistake.
+\item	Vent the system (click on turbo pump icon on touchscreen, then vent)
 \item	Make sure ion gauge is off: when it’s off, the left display (MBE system pressure) will not display a reading. If it is not off, need to turn it off and wait 1 hour for filament to cool down before venting.
 \item	Venting is done with in-house N2 since we do not want fill the MBE with air. Open the N2 valve behind the AFM desk and to the left of the compressed air valve. Make sure to use N2 and not compressed air! Open the valve at end of N2 pipe (white) and adjust the regulator until feel proper N2 pressure: want a gentle N2 flow since venting slowly is safer. Insert the N2 pipe into black pipe which comes out of turbo pump.
 \item	On touch screen press: \emph{turbo pump} $\rightarrow$ \emph{vent} $\rightarrow$ \emph{yes}. This turns off both roughing and turbo pump. Turbo takes some time to slow down. The system will gradually fill with N2 and can hear the soft air flow sound going in through the turbo. \textbf{Need to wait until the soft noise is almost gone which means the system is vented}. The small pressure reading in right display reads it near the turbo pump, so it doesn’t indicate pressure inside MBE. It can be used for rough estimate of if pressure is rising or falling. When the air flow sound disappeared, pressure showed 2.8e0mB. The flexibility of the bevel on the manipulator can also help determine if system has been vented enough.
@@ -48,31 +48,35 @@ For the W evaporator, its source is a rod so can carefully put the metal protect
 
 
 \section{Bakeout}
+\subsection{Procedure}
 Must follow all steps carefully!
 \begin{enumerate}
-\item Make sure maintenance work on evaporators is completed and source materials installed. Make sure a clean blank sample holder is in FEL, no sample plate in MBE heater stage.
-\item	Start pumping down MBE+FEL by turning on turbo pump. Keep ion pump off. Make sure pneumatic gate valve is open, [MBE chamber, FEL] is open, metal valve [Turbo molecular pump, FEL] is closed. System needs to reach good vacuum (mid e-8mB or better) before start baking. 
-\item	Thoroughly flush water cooling lines with air. Increase air pressure by $1/2$ turn at valve behind AFM computer. Remember to decrease it back when done. Must flush significantly longer $>30$min each line) than for regular shut-down of water chiller since water vapor in lines during bakeout can cause damage.
-\item	Disconnect water cooling lines including the thicker lines above the T-shaped connectors with valves (these lines need to be slit with knife to be able to remove them). 
-\item	Disconnect evaporator electronic connections. For safety, unplug corresponding power supplies before removing Se evaporator cable connections. 
-\item	Use IPA to clean the chamber surfaces and viewports.
-\item	Move thickness monitor in to avoid it being hit by bakeout panel. For bakeout need to move in the protrusion so the bakeout wall doesn’t hit it. The middle sharpie mark is bakeout. We don’t move it all the way in because that put unnecessary (in the sense that the moving in part of the way already ensures that it doesn’t hit the bakeout wall) stress on the bevel right above the thing we are turning (bevel gets compressed a lot).
-\item	Cover viewports with 3 layers of foil to protect during bakeout.
-\item	Remove the plastic handle for metal valve [Turbo, FEL].
-\item   Remove the black magnetic couplers from transfer arms. Since there is high risk of the FEL transfer arm to jump when remove coupler and therefore for the blank (recall that we install a blank onto the transfer arm in FEL before bakeout, so that after bakeout can easily transfer it into MBE for degassing. Recall that for degassing things need a blank on the heater stage to protect it.), it is not good idea to first pump down FEL, and then try to remove coupler (we did it this way before). If blank falls, then need to vent FEL, reinstall blank again and then it might fall again.\\
+\item Make sure maintenance work on evaporators is completed and source materials installed. Make sure a clean blank Mo plate is in FEL and no sample plate in MBE heater stage. Since there is high risk of the FEL transfer arm to jump when remove coupler and therefore for the blank (recall that we install a blank onto the transfer arm in FEL before bakeout, so that after bakeout can easily transfer it into MBE for degassing. Recall that for degassing things need a blank on the heater stage to protect it.), it is not good idea to first pump down FEL, and then try to remove coupler (we did it this way before). If blank falls, then need to vent FEL, reinstall blank again and then it might fall again.\\
 Way to do it:
 \begin{enumerate}
-\item	Vent FEL together with the MBE by having [MBE,FEL] valve open, but [FEL, turbo] metal valve closed (since want there to be only 1 pathway for venting (through the gate valve (touchscreen controlled).  
-\item	Open FEL viewport and install blank to transfer arm (make sure that have already taken out any samples/sample plates from the heater stage!). 
-\item	Gently close viewport using same gasket and just few nuts (this is so that if blank falls while taking off the coupler, it does not fall out of viewport). 
-\item	Now slowly remove the coupler. If blank falls, it’s not a big issue, just open viewport again and reinstall blank and try again.
-\item	Once ready to pump down MBE, pump it down along with FEL, by keeping the valves in the configuration described above.
+	\item	Vent FEL together with the MBE by having [MBE,FEL] valve open, but [FEL, turbo] metal valve closed (since want there to be only 1 pathway for venting (through the gate valve (touchscreen controlled).  
+	\item	Open FEL viewport and install blank to transfer arm (make sure that have already taken out any samples/sample plates from the heater stage!). 
+	\item	Gently close viewport using same gasket and just few nuts (this is so that if blank falls while taking off the coupler, it does not fall out of viewport). 
+	\item	Now slowly remove the coupler. If blank falls, it’s not a big issue, just open viewport again and reinstall blank and try again.
+	\item	Once ready to pump down MBE, pump it down along with FEL, by keeping the valves in the configuration described above.
 \end{enumerate}
+\item	Start pumping down MBE+FEL by turning on turbo pump. Keep ion pump off. Make sure pneumatic gate valve is open, [MBE chamber, FEL] is open, metal valve [Turbo molecular pump, FEL] is closed. System needs to reach good vacuum (mid e-8mB or better) before start baking. 
+\item	Thoroughly flush water cooling lines with air. Must flush significantly longer $>30$min each line) than for regular shut-down of water chiller since water vapor in lines during bakeout can cause damage(see details in Section \ref{flushing}).
+\item	Disconnect water cooling lines including the thicker lines above the T-shaped connectors with valves (these lines need to be slit with knife to be able to remove them). 
+\item	Make sure all evaporator electronic connections are disconnected. (For safety, unplug corresponding power supplies before removing Se evaporator cable connections). 
+\item	Use IPA to clean the chamber surfaces and viewports.
+\item	Move thickness monitor in to avoid it being hit by bakeout panel. For bakeout need to move in the protrusion so the bakeout wall doesn’t hit it. The middle sharpie mark is bakeout. We don’t move it all the way in because that put unnecessary (in the sense that the moving in part of the way already ensures that it doesn’t hit the bakeout wall) stress on the bevel (bevel gets compressed a lot).
+\item	Cover viewports with 3 layers of foil to protect during bakeout.
+\item	Remove the plastic handle for metal valve [Turbo, FEL].
+\item   Remove the two black magnetic couplers from transfer arms. 
 \item	Make final checks before install bakeout panels: 
-a.	Make sure no stray objects are lying on the system and all viewports are covered with foil.
-b.	Valves are in correct position.
-c.	All electrical wires that need to be removed are removed (LEDs, evaporator connections etc)
-d.	Evaporator shutters are closed.
+\begin{enumerate}
+	\item \textbf{Are you sure the water lines are flushed?}
+	\item Make sure no stray objects are lying on the system and all viewports are covered with foil.
+	\item Valves are in correct position.
+	\item All electrical wires that need to be removed are removed (LEDs, evaporator connections, the wires that connect to the manipulator, etc)
+	\item Evaporator shutters are closed.
+\end{enumerate}
 \item	Install baking panels (see installation order below) and 2 heating blankets (for transfer arm and linear transfer line to STM). Connect power for the heating blankets.
 \subsubsection*{Panels setup}
 
@@ -125,13 +129,17 @@ d.	Evaporator shutters are closed.
 a.	Turbo pump is operating at full speed
 b.	Ion pump and TSPs are off.
 c.	Emission current on the ion gauge is set to automatic mode (see degassing ion gauge for details about using the controller).
-\item	Start bakeout with set temperature of 105C. 
-\item	Pressure in MBE chamber will start rising. Foreline pressure (the one in small display window) will stay constant (measured near the pump) at ~5.9e-1mB. It is expected to take about 90min for system to reach the 105C bakeout temperature. Should monitor pressure closely during this first period. Pressure will most-likely reach 2e-6mB. After see decreasing trend in pressure can monitor less frequently.
-\item	As bakeout continues, dirt/impurities are being removed from the system and pressure will gradually drop. Monitor pressure periodically. Once pressure drops to ~8e-8 can probably stop bakeout. Bakeout will take about 72 hours.
+\item	Start bakeout with set temperature of 105C if have selenium source in the chamber. If don't have selenium source, can use a higher temperature (i.e. we used 120C on 6/2/2017).
+\item	Pressure in MBE chamber will start rising. Foreline pressure (the one in small display window) will nearly stay constant (measured near the pump) at ~5.5 to 5.9e-1mB. It is expected to take about 90min for system to reach the 105C bakeout temperature. Should monitor pressure closely during this first period. Pressure will most-likely reach between 2 to 5e-6mB. 
+\item Use a webcam to monitor pressure during rest of bakeout. The first about 9 hours are most dangerous and require more frequent checking. \textbf{Note that the pressure may start decreasing a bit (water molecules have been removed) and then increase again (probably selenium is being evaporated from chamber walls)}. See 6/2/17 bakeout log for example of this.
+\item	As bakeout continues, dirt/impurities are being removed from the system and pressure will gradually drop. Monitor pressure periodically. Once pressure drops to ~8e-8 can probably stop bakeout. Most likely this will take 60-72 hours of baking.
 \end{enumerate}
 
+\subsection{Bakeout Logs}
+ADD EXCEL GRAPHS HERE
+
 \section{Immediate Post-Bakeout Procedures}
-Once bakeout is stopped:
+Right after bakeout is stopped:
 \begin{enumerate}
 \item	Degas ion pump:
 a.	Turn on ion pump controller (at very bottom of stand) and press \emph{start HV} on controller touch screen. It will automatically select an HV at ~7kV. Will see pressure spike up to e-6 or e-5 range at which point immediately press \emph{stop HV}.  Then repeat turning on and off but each time should be able to leave ion pump on for longer intervals (pressure will be more stable). Eventually should be able to leave it on for 5-10min with stable pressure.
@@ -151,7 +159,7 @@ Overide interlock (since degassing causes pressure rise and system will not allo
 \item	Once system temperature reaches ~80C, remove the small round covers to speed cooling.
 \item	While ion pump is still off, run TSP filaments one by one for 1 ramp every 30min. 1 ramp takes just 1 min and will auto shut off. Will still have some degassing occur and pressure could rise to low e-7 range. Running TSPs will help improve the vacuum. After finish running TSPs, remember is disable the interlock override so that the safety feature is enabled.
 \item	Once temp. reaches ~70C, open flaps on flexible bakeout panels and heated tubes but do not remove them.
-\item.	At 60C, remove all flexible bakeout panels and tubes.
+\item   At 60C, remove all flexible bakeout panels and tubes.
 \item	At 50C, remove all metal bakeout panels.  Remember to finish running all 3 TSPs for 1 ramp cycle. By this time, pressure should have reached low e-9 range.
 \item	Wait until most system components are only slightly warm to the touch before doing any other work on the system. While waiting, can connect the electronic cables for the evaporators and the LEDs for the viewports.
 \item	Once pressure reaches low e-9mB range, will need to perform more degassing. All of these are not possible to do the same day as finishing bakeout. Generally allow about a week to finish all the degassing.
@@ -165,14 +173,11 @@ Overide interlock (since degassing causes pressure rise and system will not allo
 	\item Once ion pump is relatively cool, close main gate valve (touchscreen) so system is running only on ion pump. Leave turbo running since will need it for degassing.
 	\item Need to wait for system to cool (can judge by heater stage temperature, readout on touchscreen or touching various system components) before transfer blank to heater stage.
 \end{enumerate}
-
 \item	Degas evaporators (see procedure). 
 \item	Degas heater stage (see procedure). \textbf{Make sure the evaporators have been degassed first, otherwise they will contaminate the heater stage!}
 \item	Run TSPs, 1 filament at a time, to help reduce pressure which will have increased due to degassing.  To run: override the interlock and press \emph{activate devices} on the interlock screen on touch screen. Then on very bottom touch screen, select which TSP filament want to run, hold “start” until displays “firing”. TSP will automatically run and shut off. When run TSPs, the pressure will increase fast and then decrease. This pressure is due to the titanium being sublimated which then absorbs other particles and sticks to the chamber walls.
 \item	When pressure reaches 1-2e-9mB, turn on ion pump (press \emph{start HV}). If pressure spikes up too high, immediately turn off ion pump. 
-\item	If were able to turn on ion pump successfully, close gate valve on touchscreen (this is valve btw. MBE chamber and turbo pump). Now the system will be pumped only by ion pump.
-\item	Vent turbo pump (make sure gate valve is closed!) and turn off turbo to let it rest.
-\item	With the ion pump running, should be able to reach e-10mB pressures (without L N2 filling).
+\item	If were able to turn on ion pump successfully, close gate valve on touchscreen (this is valve btw. MBE chamber and turbo pump). Now the system will be pumped only by ion pump. With the MBE on ion pump only, should be able to reach e-10mB pressures (without L N2 filling).
 \end{enumerate}
 
 \section{Degassing Se Evaporator}
@@ -194,34 +199,38 @@ During degassing pressure may rise significantly since Se is easy to evaporate. 
 (When degassed on 10/13/16, pressure stayed in the e-9mB range even at the max temperature settings of 60C and 145C).
 \end{enumerate}
 \section{Degassing E-beam Evaporators}
-The E-beam evaporators will be degassed twice. The first time, no water cooling and no HV is used. This is to degas the filaments. During the second degas, we use both the water cooling and HV and degas the evaporation source. For the second degas the procedure for W and Sn evaporators are different.
-\subsection{Degassing E-beam evaporators without water cooling and HV}
-The initial degas procedure is the same for both  evaporators. \textbf{During this we keep HV off!} This is extremely important, since we have the water cooling off. Otherwise we will overheat the evaporators.
+The tungsten E-beam evaporator will be degassed twice. The first time, no water cooling and no HV is used. This is to degas the filaments. During the second degas, we use both the water cooling and HV and degas the evaporation source. The Sn evaporator will be degassed only with water cooling because Sn has high vapor pressure and low melting point.
+\subsection{Degassing Tungsten evaporator without water cooling and HV}
+\textbf{This does not apply to Sn evaporator when have Sn in the crucible! If you do this, you will melt or evaporate all the Sn!}.\\
+This is also the procedure for any other e-beam evaporator where the source is a rod or for degassing an evaporator where have an empty crucible (i.e. just installed a new crucible). \textbf{During this we keep HV off!} This is extremely important, since we have the water cooling off. Otherwise we will overheat the evaporators.
 \begin{enumerate}
 \item	Turn off ion pump to avoid potential damage due to high pressures from degassing. 
 \item	Make sure evaporator shutters are closed, otherwise too much heat is introduced into the MBE chamber.
 \item	Make sure that have properly connected the electronic cables to the evaporators: red goes to HV (the rod), black to flux monitor terminal, 4-pin connector to 4-pin port, grounding cable should be put under the nut on the flux monitor port protrusion and nut gently tightened with wrench.
-\item	Will degas without water cooling so evaporators can reach a high temperature enabling to remove contaminants. This means must make sure that HV is kept off! Otherwise an electron beam will heat crucible/rod and thus evaporator to unsafe temperatures (the temperature reading on evaporator controller does not accurately portray temperature near crucible or rod when that is heated by and electron beam).
-\item	It is most time efficient to degas both evaporators at the same time. Gradually increase FIL current on both evaporators to 1.6A. 
+\item	Will degas without water cooling so evaporator can reach a high temperature (i.e. 250C) enabling to remove contaminants. This means must make sure that HV is kept off! Otherwise an electron beam will heat crucible/rod and thus evaporator to unsafe temperatures (the temperature reading on evaporator controller does not accurately portray temperature near crucible or rod when that is heated by and electron beam).
+\item Gradually increase FIL current to 1.6A. (If need to degas two evaporators without water cooling (this will be rare), it is most time efficient to degas both evaporators at the same time.)
 \item	Wait for evaporator temperatures to rise which will cause pressure to rise. 
-When did degassing on 10/5/16 on W evaporator, at first there was significant flux which later went to <0nA. This was probably the filament degassing, since we did not degas filament on this evaporator after changing it. The reason that we see no flux when degas the entire evaporator is that the filament locally reaches much higher temperatures than the evaporator body. These high temperatures of filament are enough to cause the dirt on filament (if haven’t degassed it previously) to ionize and register a reading on the flux monitor. The evaporator body reaches just 200-300C which is not enough temperature to ionize the dirt coming from it.
+When did degassing on 10/5/16 on W evaporator, at first there was significant flux which later went to $<$0nA. This was probably the filament degassing, since we did not degas filament on this evaporator after changing it. The reason that we see no flux when degas the entire evaporator is that the filament locally reaches much higher temperatures than the evaporator body. These high temperatures of filament are enough to cause the dirt on filament (if haven’t degassed it previously) to ionize and register a reading on the flux monitor. The evaporator body reaches just 200-300C which is not enough temperature to ionize the dirt coming from it.
 \item	During degassing, keep pressure below 9e-7mB. If pressure rises above this, decrease FIL to 1.5A or 1.4A. If temperature is rising too slow, can increase FIL in 0.1A increments. Note that there is a delay between increasing FIL and temperature increase. Once temperature reaches 220-240C and pressure stabilizes and starts decreasing, degassing is complete. (Manufacturer suggests to tune FIL to 2A and just wait 1-2hrs for temperature to rise to 200-300C, but we find this causes too fast temperature rise which causes too high of pressure so we use lower FIL currents). Unlike the STM thermal evaporators, here only 1 ramp up cycle is necessary to degas.
 \item	Gradually tune down FIL to zero. Evaporators will take a while (several hours to cool).
 \end{enumerate}
+\subsection{Reconnecting Water Cooling}
+The stainless steel pipe going down from evaporator is where hook the supply (green) lines. The pipe going out horizontally is where hook the return (red) lines.\\
+Note: We have 2 types of plastic pipes: metric standard (about 6mm outside diameter) and US standard (1/4” or about 6.25mm diameter). The metric pipes fit the grey connectors on the tubes. The US pipes fit the orange connectors. Don’t mix them up or will have leak! If try to insert US pipe into metric connector will feel a lot of resistance. When inserting into the proper connector, should just be able to easily insert then push and feel a click as it locks in place.
+The manifold uses all US pipes. The Se evaporator uses metric tubes and tube end has adapter with thread. These screw onto evaporator water cooling ports which are labeled as in and out.
 
-
-\subsection{Degassing W Evaporator with water cooling and HV}
-\textbf{Note: This only applies to the W evaporator. Does not apply to Sn because that one uses a crucible!}.\\\\
-\textbf{This is done after bakeout and degassing both e-beam evaporators w/o water cooling (and w/o HV) and the resistive heater stage.}
+\subsection{Degassing E-beam Evaporators with water cooling, L N2 cooling, and HV on}
+\textbf{This is done after bakeout and degassing tungsten w/o water cooling (and w/o HV).}
+Both e-beam evaporators can be degassed at the same time.
 \begin{enumerate}
 \item	Turn on turbo pump the day before plan to do this degassing. Keep ion pump on for now.
 \item	Make sure water cooling is running properly.
 \item	Make sure turbo pump has been running. Open gate valve: this will result in a pressure spike (i.e. into low e-9mB range) which is normal. The pressure should fall back down to e-10mB range after fill the cryostat. 
 \item	Turn off ion pump to protect it from high pressures/contaminants due to degassing.
 \item	Fill L N2 cryostat which acts as a pump to help maintain low pressures during degassing. It also keeps the chamber walls cool. This is important since there is concern that using evaporators w/HV on radiates a lot of heat which would heat up the chamber walls and could damage the coating on the walls. The company suggests to always use L N2 when using evaporators with HV on.
-\item	Gradually tune HV to 2000V. Slowly increase FIL until get a stable FLUX of 10-20nA. This will occur after the dirt from the rod has been degassed and is slight evaporation of rod occurring. 
-On 10/12/16, reached 10nA FLUX at FIL = 1.88A, EMIS=26.6mA. Reached 17nA FLUX at FIL=1.90A, EMIS = 28.0mA and held at this setting for 15min. Pressure stayed in high e-10mB or 1e-9mB range throughout the degassing.
-\item	Run at this setting which has stable FLUX of 10-20nA for 15min. Do not run longer because are evaporating and consuming the rod here. While running, refill cryostat if necessary (if no vapor coming out of outlet, then need to fill).
+\item	Gradually tune HV to 2000V for W and 800V for Sn. Slowly increase FIL until get a stable FLUX of 10-20nA for W and about 100nA for Sn. This will occur after the dirt from the rod has been degassed and is slight evaporation of rod occurring. 
+On 10/12/16, W reached 10nA FLUX at FIL = 1.88A, EMIS=26.6mA. Reached 17nA FLUX at FIL=1.90A, EMIS = 28.0mA and held at this setting for 15min. Pressure stayed in high e-10mB or 1e-9mB range throughout the degassing.
+\item	Run at this setting with stable flux for 15min. Do not run longer because are evaporating and consuming the source material here. While running, refill cryostat if necessary (if no vapor coming out of outlet, then need to fill).
 \item	Tune down FIL and HV.
 \end{enumerate}
 
@@ -235,14 +244,14 @@ On 10/12/16, reached 10nA FLUX at FIL = 1.88A, EMIS=26.6mA. Reached 17nA FLUX at
 \item	Make sure viewport metal shutter is closed to protect viewport from the high temperatures.
 \item	On touchscreen go to “bias selector” screen and choose “resistive heating”. Then turn on heater control box, press preview, make sure see 28.7 voltage value (+/-0.2) and 0.02(or close) current value. If values are different, then do not proceed further. Press \emph{out} on heater controller: this turns on the output to the heater stage. Push \emph{fine} to be able to have better control when turn the dials. 
 \item	Tune the current up in 0.5A steps (or lower increments if pressure increases too much).  Voltage will increase automatically. Heater stage temperature is displayed on the touch screen. Temperature will increase as increase current. Keep pressure below 5e-7mB, but preferably in mid-e-8mB while current is below 8A.
-\item	At first as increase current in 0.5A steps, should observe increases in pressure, followed by decreasing back down to the value before did the increase. Once heat sample stage to ~600C, pressure will most likely gradually creep up without decreasing. When see pressure gradually creep up, just keep increasing the current after waiting for a few minutes. The continuous pressure increase is because higher temperatures, stage is also significantly heating the MBE chamber walls and they will start degassing also. Since there is a large amount of walls, pumps will not be able to overcome this degassing. This is why it is important to start the heater stage degassing at a low base pressure.
+\item	At first as increase current in 0.5A steps, should observe increases in pressure, followed by decreasing back down to the value before did the increase. Once heat sample stage to about 600C, pressure will most likely gradually creep up without decreasing. When see pressure gradually creep up, just keep increasing the current after waiting for a few minutes. The continuous pressure increase is because higher temperatures, stage is also significantly heating the MBE chamber walls and they will start degassing also. Since there is a large amount of walls, pumps will not be able to overcome this degassing. This is why it is important to start the heater stage degassing at a low base pressure.
 \item	Continue tuning up current (while keeping pressure below 5e-7mB), until heater stage reaches 915C. The current needed will most-likely be 10.66A. Do not allow heater stage to heat above 917C (1190K) since the absolute upper limit that the heater stage can withstand. 
 \item	Degas at 915-917C for 3-5 minutes. Note that the temperature tends to slowly increase even after have already set the current to 10.66A so monitor the temperature closely. If at any point it becomes $>917$C, decrease the current immediately. Pressure is unlikely to decrease and may even creep up. This however does not mean that degassing is ineffective. Pressure is high because the heating of heater stage to such high temperature heats the MBE chamber walls which start degassing a lot also.
 \item	Gradually tune down current to 0. Can tune down faster than tune up, but still do it at a controlled speed so pressure and temperature doesn’t fall too fast. Can turn off “fine” to tune down, but in that case, turn knob very slowly.
 \item	To shut-off: on heater controller, deactivate \emph{out} button, deselect \emph{fine}, turn off controller box. On touch screen \emph{bias selector} screen, select \emph{grounding}.
 \end{enumerate}
 Some other notes:\\
-At 200C, sample plate will already glow an orange color. When heater base reaches $>400$C, plate will glow bright orange color (see picture). At 680C, plate becomes even more bright, orange-yellow color. At 765C, plate glows almost white at the center, but still bit of orange. At 870C, sample plate glows very bright white/pink color.\\\\
+At 200C, sample plate will already glow an orange color. When heater base reaches $>400$C, plate will glow bright orange color. At 680C, plate becomes even more bright, orange-yellow color. At 765C, plate glows almost white at the center, but still bit of orange. At 870C, sample plate glows very bright white/pink color.\\\\
 Note: The temperature displayed on touchscreen is at the heater baseplate. Temperature of sample is significantly higher and maxes out at 1670K when baseplate reaches the 1190K limit. There is a reference chart in the manual.\\\\
 Maximum allowed current for the heater is 12A. Do not exceed this or will damage the filament. Manual states that usually 11A is sufficient to reach the maximum heater baseplate temperature. We have found repeatedly that current of 10.66-10.67A is sufficient to reach 915-917C.\\\\
 If degas for a second time (i.e. in the case that the first attempt reached too high pressures before could reach 915C), then pressure should behave much better this time and therefore can increase the current a little faster and in 1.0A increments up to the level that reached upon first degas attempt.
