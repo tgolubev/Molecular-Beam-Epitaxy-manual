@@ -45,10 +45,11 @@ When initially heat a new rod, almost all rods will melt at the tip and form a b
 Can recognize when the rod has significantly shortened in length when “at a given EMIS the high voltage has to be increased in order to obtain the same FLUX”. But in our case for W, we already are using the maximum voltage, so we will probably just see the FLUX drop when use the same EMIS. If this occurs, then need to move the rod further in. Since we do not know how much of rod has melted it is probably best to move it just 0.5mm at a time.
 
 \section{Selenium evaporator procedures}
-The selenium evaporator is made out of two parts: an effusion cell and a cracker zone. The cracker zone is a heated region near the top of the crucible (aka the hot lip). Since Se tends to evaporate in clusters, the cracker zone is used to further crack down the Se clusters which are evaporating. According to literature, temperatures for efficient cracking of Se range from 400-900C. However, due to risk of overheating the Se source (i.e. boiling), for our evaporator another group told us that 400-500C is the limit. The two zones are controlled by two separate controller. We label them EC (effusion cell) and HL (hot lip).
+The selenium evaporator is made out of two parts: an effusion cell and a cracker zone. The cracker zone is a heated region near the top of the crucible (aka the hot lip). Since Se tends to evaporate in clusters, the cracker zone is used to further crack down the Se clusters which are evaporating. According to literature, temperatures for efficient cracking of Se range from 400-900C. However, due to risk of overheating the Se source (i.e. boiling), for our evaporator another group told us that 400-500C is the limit. The two zones are controlled by two separate controller. We label them EC (effusion cell) and HL (hot lip).\\\\ 
+Water cooling must be used. We have used both 10C and 20C water temperatures without major problems. The only minor thing is that on humid days, at 10C the outside of the water lines get lots of condensation and can make a puddle on the floor. The manual recommends 5-10C.
 \begin{enumerate}
 \item \textbf{Turn off the ion pump. This is essential!}.
-\item Ramp both controllers slowly (15$\degree$ increments for HL and 10$\degree$ for EC) to the desired temperature. For all depositions up to May 2017, we have been using 60C for EC and between 135-155C for HL. However, we were probably not using the cracker properly and not actually cracking the Se. Also, it may be ok to use higher temperatures for EC since 100-120C seem commonly used in other groups.
+\item Ramp both controllers slowly (15$\degree$ increments for HL and 10$\degree$ for EC) to the desired temperature. For all depositions up to May 2017, we have been using 60C for EC and between 135-155C for HL. However, we were probably not using the cracker properly and not actually cracking the Se. Also, it may be ok to use higher temperatures for EC since 100-120C seem commonly used in other groups. When the controllers are ramped up close to deposition conditions, the MBE pressure will increase significantly and can reach E-8mB range. 
 \item When ready for deposition, open the Se shutter (turn 180$\degree$ from close position).
 \end{enumerate}
 
@@ -81,23 +82,28 @@ To use QCM:
 \item	Press “clear” to make the thickness reading 0.
 \item	Get the evaporator running at the deposition parameters but with the shutter closed, so no material is being deposited on your substrate yet. 
 \item	Open the shutter on the evaporator and immediately open shutter on QCM which allows it to measure things.
-\item	For some materials, the deposition slower is faster than the resolution of the rate meter (ie. $<0.1$A/s) so the rate meter will always read 0. In this case need to use the thickness meter (which is additive thickness) and divide by the running time to estimate the average deposition rate.
+\item	For some materials, the deposition rate is slower than the resolution of the rate meter (ie. $<0.1$A/s) so the rate meter will always read 0. In this case need to use the thickness meter (which is additive thickness) and divide by the running time to estimate the average deposition rate.
 \end{enumerate}
 
-\textbf{Currently, as of May 2017, the QCM is unable to detect Sn deposition}. The reason may be due to the geometry of the ports. According to Omicron, the QCM is located 20mm below the point where the beams should meet. For the E-beam evaporators, the beam is quite small, so from some ports it is possible that the beam simply doesn't hit enough of the QCM to result in a reading.
-
-\textbf{On June 1, 2017 we switched the positions of the Sn and W evaporator and will retest the QCM}.
+\textbf{Currently, as of June 2017, the QCM is unable to detect deposition from the port which is 120$\degree$ ccw (when viewing from above) from the one right below the QCM bevel.} In this port used to be the Sn evaporator and QCM didn't detect its deposition. On June 1, 2017 we switched the positions of the Sn and W evaporator and retested. Now W deposition was not detected and Sn was detected. This means that the issue is due to geometry of the ports. According to Omicron, the QCM is located 20mm below the point where the beams should meet. For the E-beam evaporators, the beam is quite small, so from some ports it is possible that the beam simply doesn't hit enough of the QCM to result in a reading.
 
 \subsection{QCM calibrations}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{Se-calibration.png} 
-	\caption{Se calibration from 10/14/16. Effusion cell temperature was kept at 60C.}}
+	\caption{Se calibration from 10/14/16. Effusion cell temperature was kept at 60C.}
 	\label{fig:W calibration}
 \end{figure}
 \begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{W-calibration.png} 
-		\caption{W calibration done on 10/20/16}
+		\caption{W calibration done on 10/20/16. W evaporator was in the port below QCM bevel.}
 		\label{fig:W calibration}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Sn-calibration.png} 
+	\caption{Sn calibration done on 6/8/17 when Sn evaporator was in the port below QCM bevel.}
+	\label{fig:W calibration}
 \end{figure}

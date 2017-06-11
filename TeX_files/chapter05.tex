@@ -37,7 +37,7 @@ Note: This is different from the Omicron MBE manual which has mistake.
 For the W evaporator, its source is a rod so can carefully put the metal protective tube/shield onto evaporator (1 person should hold evaporator steady), making sure to not hit components against the shield, and use the nuts the hold it in place. Wrap around near evaporator-shield connection point with large Kimwipes and then foil. Then can lay the W evaporator down, supporting it on the shutter and electrical connection "legs". \textbf{If the Sn or Se evaporator has source in it, can never lay it down!}. Once person must always hold it upright until the source crucible is removed.
 \item	After have placed shielded evaporator in safe and stable location, need to cover the evaporator opening in MBE system using a flange.  First wipe it with IPA and then put a new Cu gasket into the slot. 
 \item	Attach the cover with the same nuts used for evaporator to the opening. For tightening components on vacuum systems need to ensure that do it evenly. Here dealing with small components so it is not so strict. Must make sure that you are always turning in the correct direction (tightening and not loosening) because if loosen after tightening and then tighten again, this could result in leakage. Correct direction for tightening is clockwise when looking at the nut or bolt from the side that’s facing out. First hand-tighten all the nuts. Then go in a crisscross pattern and tighten about $1/4$ turn. Then go around in circles, gradually tightening each nut about the same amount. Do not apply too much force when tightening. Due to space limitations, it seems easier to hold the bolt in place while tightening the nuts from the bottom. Make sure to not hit the wobble stick which will be right above your head!
-\item If planning on baking the system soon, before pump down, temporarily close [FEL, MBE] valve and install a blank (need for post-bakeout degassing) to the FEL. \textbf{Then before even tightening the viewport, remove the magnetic coupler from the FEL transfer arm while system is still vented}. This way if the blank falls (which has good chance of happening) while trying to remove coupler, can just open view port, put it back in the jaw, and try  again. If where to fall when already pumped down, would need to vent FEL, then pump it down again after put sample back.
+\item If planning on baking the system soon, before pump down, temporarily close [FEL, MBE] valve and install a blank (need for post-bakeout degassing) to the FEL. \textbf{Then before even tightening the viewport, remove the magnetic coupler from the FEL transfer arm while system is still vented}. This way if the blank falls (which has good chance of happening) while trying to remove coupler, can just open view port, put it back in the jaw, and try  again. If were to fall when already pumped down, would need to vent FEL, then pump it down again after put sample back.
 \item	 After the cover(s) are on, need to pump down the system. It is not good to leave the system at atmosphere pressure even though is filled with N2. Should pump down using the same valve positions described in step 3. To pump down:
 \begin{enumerate}
 \item	Turn off N2 flow but don’t disconnect the tube from turbo pump, otherwise it lets air into pump which could make it harder to pump. 
@@ -51,7 +51,8 @@ For the W evaporator, its source is a rod so can carefully put the metal protect
 \subsection{Procedure}
 Must follow all steps carefully!
 \begin{enumerate}
-\item Make sure maintenance work on evaporators is completed and source materials installed. \textbf{It is a good idea to check all source material levels at each system venting}. 
+\item Make sure maintenance work on evaporators is completed and source materials installed. \textbf{It is a good idea to check all source material levels at each system venting}. Also it is a good time to replace TSP filaments if necessary.
+\item When re-installing the evaporators, be mindful of their orientation. For the e-beams we have always kept the filament posts (position marked with sharpie) pointing towards the interior of the chamber. This is so that when the evaporator is angled in the MBE port, the filament is tilted up instead of down so it has (in theory) less chance to touch the rod or crucible.
 \item Make sure a clean blank Mo plate is in FEL and no sample plate in MBE heater stage. Since there is high risk of the FEL transfer arm to jump when remove coupler and therefore for the blank (recall that we install a blank onto the transfer arm in FEL before bakeout, so that after bakeout can easily transfer it into MBE for degassing. Recall that for degassing things need a blank on the heater stage to protect it.), it is not good idea to first pump down FEL, and then try to remove coupler (we did it this way before). If blank falls, then need to vent FEL, reinstall blank again and then it might fall again.\\
 Way to do it:
 \begin{enumerate}
@@ -137,18 +138,25 @@ c.	Emission current on the ion gauge is set to automatic mode (see degassing ion
 \end{enumerate}
 
 \subsection{Bakeout Logs}
-ADD EXCEL GRAPHS HERE
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{bakeout-at-120C-no-Se.png} 
+	\caption{June 2017 bakeout at 120C without Se evaporator installed. Pressures were recorded with webcam.}
+	\label{fig:W calibration}
+\end{figure}
+
+
 
 \section{Immediate Post-Bakeout Procedures}
-Right after bakeout is stopped:
+After bakeout is stopped and temperature falls below 100$\degree$C:
 \begin{enumerate}
 \item	Degas ion pump:
-a.	Turn on ion pump controller (at very bottom of stand) and press \emph{start HV} on controller touch screen. It will automatically select an HV at ~7kV. Will see pressure spike up to e-6 or e-5 range at which point immediately press \emph{stop HV}.  Then repeat turning on and off but each time should be able to leave ion pump on for longer intervals (pressure will be more stable). Eventually should be able to leave it on for 5-10min with stable pressure.
+a.	Turn on ion pump controller (at very bottom of stand) and press \emph{start HV} on controller touch screen. It will automatically select an HV at 7250kV. Will see pressure spike up to e-6 or e-5 range at which point immediately press \emph{stop HV}.  Then repeat turning on and off but each time should be able to leave ion pump on for longer intervals (pressure will be more stable). Eventually should be able to leave it on for 5-10min with stable pressure.
 \item	Degas TSPs: 
-Overide interlock (since degassing causes pressure rise and system will not allow to operate things otherwise). Then press “activate devices”. Once temperature cools to $<100$C, start degassing TSP filaments (3 of them).  
+Press “activate devices” on interlock screen on touchscreen. Also might need to override interlock to get TSPs to work, but we didn't have to in June 2017. Degassing all 3 TSP filaments, waiting for pressure to recover between each.
 \begin{enumerate}
 \item	TSPs are controlled by same touch screen controller as ion pump at bottom of stand. Select 1 of the TSP filaments (1,2, or 3) and hold “start TSP” until the display reads “firing”. It will automatically ramp up the current and then ramp it back down. Pressure will go up, might reach ~1e-6mB during the ramp. 
-\item	Degas filaments 1 at a time at least 3 times. Use cycles of 1 ramp for each of 3 TSPs before doing a second ramp, instead of doing repeated ramps for only 1 individual TSP. 1 ramp cycle takes about 1min. 
+\item	Fun filaments 1 at a time at least 3 times. Use cycles (spaced by more than 20min apart) of 1 ramp for each of 3 TSPs before doing a second ramp, instead of doing repeated ramps for only 1 individual TSP. 1 ramp cycle takes about 1min. 
 \end{enumerate}
 \item	Degas ion gauge: 
 \begin{enumerate}
@@ -176,7 +184,6 @@ Overide interlock (since degassing causes pressure rise and system will not allo
 \end{enumerate}
 \item	Degas evaporators (see procedure). 
 \item	Degas heater stage (see procedure). \textbf{Make sure the evaporators have been degassed first, otherwise they will contaminate the heater stage!}
-\item	Run TSPs, 1 filament at a time, to help reduce pressure which will have increased due to degassing.  To run: override the interlock and press \emph{activate devices} on the interlock screen on touch screen. Then on very bottom touch screen, select which TSP filament want to run, hold “start” until displays “firing”. TSP will automatically run and shut off. When run TSPs, the pressure will increase fast and then decrease. This pressure is due to the titanium being sublimated which then absorbs other particles and sticks to the chamber walls.
 \item	When pressure reaches 1-2e-9mB, turn on ion pump (press \emph{start HV}). If pressure spikes up too high, immediately turn off ion pump. 
 \item	If were able to turn on ion pump successfully, close gate valve on touchscreen (this is valve btw. MBE chamber and turbo pump). Now the system will be pumped only by ion pump. With the MBE on ion pump only, should be able to reach e-10mB pressures (without L N2 filling).
 \end{enumerate}
@@ -231,7 +238,7 @@ Both e-beam evaporators can be degassed at the same time.
 \item	Fill L N2 cryostat which acts as a pump to help maintain low pressures during degassing. It also keeps the chamber walls cool. This is important since there is concern that using evaporators w/HV on radiates a lot of heat which would heat up the chamber walls and could damage the coating on the walls. The company suggests to always use L N2 when using evaporators with HV on.
 \item	Gradually tune HV to 2000V for W and 800V for Sn. Slowly increase FIL until get a stable FLUX of 10-20nA for W and about 100nA for Sn. This will occur after the dirt from the rod has been degassed and is slight evaporation of rod occurring. 
 On 10/12/16, W reached 10nA FLUX at FIL = 1.88A, EMIS=26.6mA. Reached 17nA FLUX at FIL=1.90A, EMIS = 28.0mA and held at this setting for 15min. Pressure stayed in high e-10mB or 1e-9mB range throughout the degassing.
-\item	Run at this setting with stable flux for 15min. Do not run longer because are evaporating and consuming the source material here. While running, refill cryostat if necessary (if no vapor coming out of outlet, then need to fill).
+\item	Run at this setting with stable flux for 5-10min. Do not run longer because are evaporating and consuming the source material here. While running, refill cryostat if necessary (if no vapor coming out of outlet, then need to fill).
 \item	Tune down FIL and HV.
 \end{enumerate}
 
@@ -246,8 +253,8 @@ On 10/12/16, W reached 10nA FLUX at FIL = 1.88A, EMIS=26.6mA. Reached 17nA FLUX 
 \item	On touchscreen go to “bias selector” screen and choose “resistive heating”. Then turn on heater control box, press preview, make sure see 28.7 voltage value (+/-0.2) and 0.02(or close) current value. If values are different, then do not proceed further. Press \emph{out} on heater controller: this turns on the output to the heater stage. Push \emph{fine} to be able to have better control when turn the dials. 
 \item	Tune the current up in 0.5A steps (or lower increments if pressure increases too much).  Voltage will increase automatically. Heater stage temperature is displayed on the touch screen. Temperature will increase as increase current. Keep pressure below 5e-7mB, but preferably in mid-e-8mB while current is below 8A.
 \item	At first as increase current in 0.5A steps, should observe increases in pressure, followed by decreasing back down to the value before did the increase. Once heat sample stage to about 600C, pressure will most likely gradually creep up without decreasing. When see pressure gradually creep up, just keep increasing the current after waiting for a few minutes. The continuous pressure increase is because higher temperatures, stage is also significantly heating the MBE chamber walls and they will start degassing also. Since there is a large amount of walls, pumps will not be able to overcome this degassing. This is why it is important to start the heater stage degassing at a low base pressure.
-\item	Continue tuning up current (while keeping pressure below 5e-7mB), until heater stage reaches 915C. The current needed will most-likely be 10.66A. Do not allow heater stage to heat above 917C (1190K) since the absolute upper limit that the heater stage can withstand. 
-\item	Degas at 915-917C for 3-5 minutes. Note that the temperature tends to slowly increase even after have already set the current to 10.66A so monitor the temperature closely. If at any point it becomes $>917$C, decrease the current immediately. Pressure is unlikely to decrease and may even creep up. This however does not mean that degassing is ineffective. Pressure is high because the heating of heater stage to such high temperature heats the MBE chamber walls which start degassing a lot also.
+\item	Continue tuning up current (while keeping pressure below 5e-7mB), until heater stage reaches desired temperature for degassing. Omicron recommends going all the way to the upper limit of 917C (1190K). However, this may be unnecessary since we use such high temperatures for any depositions. 
+\item (If going up to maximum, for safety we in the past went to 915C. The current needed will most-likely be 10.66A. Do not allow heater stage to heat above 917C (1190K) since the absolute upper limit that the heater stage can withstand. Degas at 915-917C for 3-5 minutes. Note that the temperature tends to slowly increase even after have already set the current to 10.66A so monitor the temperature closely. If at any point it becomes $>917$C, decrease the current immediately. Pressure is unlikely to decrease and may even creep up. This however does not mean that degassing is ineffective. Pressure is high because the heating of heater stage to such high temperature heats the MBE chamber walls which start degassing a lot also.)
 \item	Gradually tune down current to 0. Can tune down faster than tune up, but still do it at a controlled speed so pressure and temperature doesn’t fall too fast. Can turn off “fine” to tune down, but in that case, turn knob very slowly.
 \item	To shut-off: on heater controller, deactivate \emph{out} button, deselect \emph{fine}, turn off controller box. On touch screen \emph{bias selector} screen, select \emph{grounding}.
 \end{enumerate}

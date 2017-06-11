@@ -11,7 +11,8 @@ The MBE is kept in this mode when it is not being used for deposition for severa
 	\item Turbo pump may remain on or off. It is more convenient to leave it on if planning on doing depositions soon.
 	\item Water cooling remains running through all four MBE loops.
 	\item On touch screen, grounding position is selected for heater controller.
-	\item If need to keep a sample in the MBE, it is kept on the heater stage. If there is a sample (which you care about) in the MBE, then the TSP can't be used (it will contaminate the sample!). If the sample will be taken out anyway, then it's ok to use TSP.
+	\item If need to keep a sample in the MBE, it is kept on the heater stage. If there is a sample (which you care about) in the MBE, then the titanium sublimation pumps (TSP) can't be used (it will contaminate the sample!). If the sample will be taken out anyway, then it's ok to use TSP.
+	\item If don't have sample (which care about) on heater stage, then run TSP every few days. When run TSPs, the pressure will increase fast and then decrease. This pressure is due to the titanium being sublimated which then absorbs other particles and sticks to the chamber walls.
 \end{enumerate}
 Even without regularly  running the TSP, the pressure is expected to stay between 4-6 E-10mB.
 
@@ -41,8 +42,7 @@ This transfer is the most difficult of the transfers done in the MBE chamber. Th
 
 \begin{enumerate}
 	\item Since the TSPs can't be used when a sample is in MBE, one TSP should be run before doing the transfer in order to keep the system cleaner. After running the TSP, wait until pressure drops back down before proceeding.
-	\item   Set the manipulator to the correct positions for transfer. As of May 2017, these positions are: z = 8.785, x = 15.95, y = 16.06, $\phi$ = 122.3$\degree$. Set these positions as close as possible since even small changes have a large effect on the smoothness of the transfer.\\
-	Note: The positions may change after a bakeout.
+	\item   Set the manipulator to the correct positions for transfer. Note: The positions may (and did) change after a bakeout.  After the June 2017 bakeout, the \textbf{new positions are:  z= 8.785, x =  16.05, y = 16.07, $\phi$ = 122.8$\degree$}. (The previous positions were: z = 8.785, x = 15.95, y = 16.06, $\phi$ = 122.3$\degree$). Set these positions as close as possible since even small changes have a large effect on the smoothness of the transfer.	
 		\begin{enumerate}
 			\item	When moving manipulator, adjust z first (z is read from the top of the large black moving piece).  Rotating in cw direction moves the stage upwards.
 			\item	Remember that when turn the brown rotation dial, need to loosen the screw and not let the dial go before tighten screw back! (it has spring in it). 
@@ -51,7 +51,7 @@ This transfer is the most difficult of the transfers done in the MBE chamber. Th
 	\item Now use the transfer arm to transfer the sample to heater stage. The two pins need to fit into the groves on the top side of the stage. 
 	\item Once have inserted the sample to heater stage, rotate the magnetic coupled handle on the transfer arm by 180$\degree$ which will release the jaw from the sample. 
 	\item Retract the transfer arm just enough for the jaw to clear the sample tab. \textbf{Then close the jaw.} This step is very important and it was specified by Tim at Omicron that the transfer arm alignment with manipulator slightly shifts between open and closed jaw and that jaw should remain closed when inserting and removing the forks except to clear the sample tab. (Following this practice in May 2017 made transfer smoother). 
-	\item In small steps (with jaw closed) continue pulling back transfer arm and between each step allow the stage to relax to natural position (i.e. not being bent from the vertical). \textbf {This is essential to prevent the sample from falling since the removing of the two transfer arm pins from the heater stage is very tight.} 
+	\item In small steps (with jaw closed) continue pulling back transfer arm and between each step allow the stage to relax to natural position (i.e. not being bent from the vertical). \textbf {This is essential to prevent the sample from falling since the removing of the two transfer arm pins from the heater stage is very tight.} It may help to very slightly wiggle the coupler cw and ccw but be careful to not accidentally open the jaw.
 	\item Once the jaw has cleared sample tab, close the jaw since this will provide the most smooth retract. When do the final retract, there will still be a small jump, but it will not be as significant since the stage wasn't so far displaced from equilibrium position.	
 	\item After transfer arm has cleared the valve, close [FEL, MBE] valve.
 \end{enumerate}
@@ -60,9 +60,8 @@ This transfer is the most difficult of the transfers done in the MBE chamber. Th
 \subsection{MBE heater stage to STM transfer}
 \begin{enumerate}
 	\item	Make sure thickness monitor is retracted all the way so it is not hit by the transfer arms.
-     \item Set manipulator to “heater stage to small wobble stick” position.
-
-	\textbf{Use the x,y coordinates from FEL to heater stage transfer done on 11/1/16 (see lab notebook)}.
+     \item Set manipulator to “heater stage to small wobble stick” position:\\
+     \textbf{z = 29.57, x = 16.05, y = 16.07, $\phi$ = 307.2$\degree$}
 	\item	Pick up sample with wobble stick: 
 	\begin{enumerate}
 	\item	Remove the wobble stick support and move wobble stick magnetic coupler (never rotate or push on the wobble stick itself, it can only wobble).  Use the slot in the side of wobble stick to align it with plane of sample plate (horizontal). 
@@ -70,27 +69,25 @@ This transfer is the most difficult of the transfers done in the MBE chamber. Th
 	\item	Rotate wobble stick magnetic coupler by 90\degree (cw or ccw doesn’t matter), while watching the slot which should face vertical when have reached 90\degree rotation.
 	\item	Slowly pull out wobble stick, the plate should follow.
 	\end{enumerate}
-\item	Use wobble stick to transfer plate to long transfer arm receptacle. 
+\item	Move manipulator z all the way up to its motion limit (at 0 position). This is so that the stage is not in the way of the long transfer arm.
+\item	Gradually move in the long transfer arm to the furthest-out (from MBE) sharpie mark (this means that the black magnetic coupler end that is closest to the MBE just reaches the mark. The end of the transfer arm will now be perpendicular to wobble stick.
+\item Rotate wobble stick 180$\degree$ so sample deposition side is facing up. Then insert sample into long transfer arm receptacle:
 \begin{enumerate}
 	\item	Slowly move the wobble stick in and make plate go into the top slot (just under the top stainless steel part) of the long transfer arm receptacle. Do not try to put plate into the bottom of receptacle! This will damage it. There should be a gap btw. bottom of receptacle and the plate. 
 	\item	Once plate is in the slot, rotate wobble stick 90$\degree$ (cw or ccw) to decouple it from the plate. 
 	\item	Slowly pull wobble stick out, it could catch on the tab so watch carefully. If see it start catching, slightly rotate wobble stick back and forth (i.e. 10$\degree$ cw and ccw) while pulling out to find the best position for decoupling it from the plate tab. 
-\end{enumerate}
-	\item	Move manipulator z all the way up to its motion limit (at 0 position). This is so that the stage is not in the way of the long transfer arm.
-	\item	Gradually move in the long transfer arm to the furthest-out (from MBE) sharpie mark (this means that the black magnetic coupler end that is closest to the MBE just reaches the mark. The end of the transfer arm will now be perpendicular to wobble stick.
-	\item Rotate wobble stick 180$\degree$ so sample deposition side is facing up. Then insert sample into long transfer arm receptacle.
-	\item	To help the transfer in STM, need to rotate the receptacle cw (from the wobble stick’s reference frame).
+\end{enumerate}	
+\item	To help the transfer in STM, need to rotate the receptacle cw (from the wobble stick’s reference frame).
 	\begin{enumerate}
 		\item	Move wobble stick to the right (when viewing from wobble stick’s side) side of the receptacle.
 		\item	Very gently push on this side, receptacle will start to rotate. Keep pushing until see the little bars/locking mechanism on the far left side, lock in place at the next bar. Rotate it by 1 of those locking bars.
 	\end{enumerate}
-\item	Rotate long transfer arm coupler by 180$\degree$ clockwise (direction is important b/c cw ensures that the opening to plate insertion will never be in a position that the plate can fall out) (be careful not to overshoot, so rotate i.e. 160$\degree$ first, then do the final adjustment). 
-	\item	Make sure long transfer arm receptacle is horizontal and sample plate is on its bottom side.
-
-	\item	Slowly move in long transfer arm to the sharpie mark closest to MBE.  This marks spot where sample will be just before valve connecting STM with transfer tube.
-	\item	Check the pressure on both systems, if pressure is ok (low E-9mB or less), slowly open [MBE, STM] valve.
-	\item	Move long transfer arm all the way in to the metal stopper.
-	\item	Transfer sample to the STM using STM wobble stick.
-	\end{enumerate}
-	For the reverse transfer procedure, follow the above procedure backwards step-by-step.
+\item	Rotate long transfer arm magnetic coupler by 180$\degree$ clockwise (direction is important b/c cw ensures that the opening to plate insertion will never be in a position that the plate can fall out) (be careful not to overshoot, so rotate i.e. 160$\degree$ first, then do the final adjustment). 
+\item	Make sure long transfer arm receptacle is horizontal and sample plate is on its bottom side.
+\item	Slowly move in long transfer arm to the sharpie mark closest to MBE.  This marks spot where sample will be just before valve connecting STM with transfer tube.
+\item	Check the pressure on both systems, if pressure is ok (low E-9mB or less), slowly open [MBE, STM] valve.
+\item	Move long transfer arm all the way in to the metal stopper.
+\item	Transfer sample to the STM using STM wobble stick.
+\end{enumerate}
+For the reverse transfer procedure, follow the above procedure backwards step-by-step.
 	

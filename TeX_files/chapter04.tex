@@ -7,7 +7,7 @@
 	\label{fig:W-evaporator}
 \end{figure}
 \subsection{Filament Replacement}
-This is described in detail in the e-beam manual. Follow everything except we have changed the design of how the filament loops around the posts to make the spot-welding job easier. We add two tiny loops around each post which help hold the filament in place while spot welding. It is still quite difficult to attach; in the past we always asked Reza for help. \textbf{The working spot weld settings are 3.6V, 14ms using spot welder to Ghosh lab}.
+This is described in detail in the e-beam manual. Follow everything except we have changed the design of how the filament loops around the posts to make the spot-welding job easier. We add two tiny loops around each post which help hold the filament in place while spot welding. \textbf{This means that need to use a 65mm length of wire (instead of the recommended 55-60mm)}. It is still quite difficult to attach; in the past we always asked Reza for help. \textbf{The working spot weld settings are 3.6V, 14ms using spot welder to Ghosh lab}.
 \begin{figure}[H]
 \begin{minipage}[b]{0.33\linewidth}
 	\centering
@@ -26,7 +26,20 @@ This is described in detail in the e-beam manual. Follow everything except we ha
 \end{figure}
 
 \textbf{Be sure to check all resistances before re-installing the evaporator!} Expected values are:
-ADD VALUES HERE
+
+\begin{align*}   %* to not show equation number. & to tell which thing to align lines by
+R_{AB} = R_{filament} &= 1.3 \Omega \\ 
+R_{CD} = R_{thermocouple} &= 2.4 \\%\Omega \text { or } 2.6 \Omega \\
+R_{A-GND} &= \infty \Omega \\
+R_{B-GND} &= \infty \Omega \\
+R_{C-GND} &= 0.5 \Omega \\
+R_{D-GND} &= 2.1 \Omega \\
+R_{HV-GND} &= \infty \Omega \\
+R_{filament-HV} &= \infty \Omega \\
+%R(\text{flux monitor pin to ground}) &= \infnty \Omega
+\end{align*}
+
+
 
 \subsection{Replenishing the source material}
 \subsubsection*{Tungsten rod}
@@ -74,3 +87,27 @@ A new crucible must be degassed before using. Crucible is installed without any 
 \item	The goal was to increase EMIS up to the maximum possible 150mA which with the 2000V HV would provide 300W of power to the crucible. This was the recommendation that the manufacturer gave us for degassing the crucible. However, after reaching 115mA, we observed very high flux current, reaching $\mu A$ level and not decreasing. We were concerned about evaporating the crucible itself (fortunately when we took out evaporator, we confirmed that no damage was done to the crucible), since contaminants should result in a decreasing flux after the initial increase. Even when decreasing EMIS to 100mA, we still observed a gradually increasing FLUX of ~$\mu A$.  Therefore we stopped degassing at this point.
 \item	Gradually tune current down to zero, then ramp voltage down. Turn off evaporator. Need to wait for the crucible to cool before vent the system and take out evaporator to fill it with source material. Keep the water cooling running while the evaporator cools. Best to keep it running overnight.
 \end{enumerate}
+
+\section{Evaporator Diagrams}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{W-evaporator-diagram.png} 
+	\caption{Measurements taken in September 2016.}
+	\label{fig:W-diagram}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{W-evaporator-drawings.png} 
+	\caption{W evaporator rod and filament setup dimensions.}
+	\label{fig:W-drawings}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Sn-evaporator-diagram.png} 
+	\caption{Zr (now Sn) evaporator measurements taken September 2016.}
+	\label{fig:Sn-diagram}
+\end{figure}
+
+
